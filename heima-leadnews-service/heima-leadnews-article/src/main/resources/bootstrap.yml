@@ -6,7 +6,13 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.200.130:8848
+        server-addr: localhost:8848
       config:
-        server-addr: 192.168.200.130:8848
+        server-addr: localhost:8848
         file-extension: yml
+minio:
+  accessKey: minioadmin
+  secretKey: minioadmin
+  bucket: leadnews
+  endpoint: http://193.112.111.16:9090
+  readPath: http://193.112.111.16:9090
