@@ -1,8 +1,8 @@
 server:
-  port: 51801
+  port: 51803
 spring:
   application:
-    name: leadnews-user
+    name: leadnews-wemedia
   cloud:
     nacos:
       discovery:
@@ -10,3 +10,9 @@ spring:
       config:
         server-addr: 8.138.104.22:8848
         file-extension: yml
+minio:
+  accessKey: admin
+  secretKey: admin123
+  bucket: heima-leadnews
+  endpoint: http://8.138.104.22:9000
+  readPath: http://8.138.104.22:9000
