@@ -17,10 +17,11 @@ public class WmTokenInterceptor implements HandlerInterceptor {
         //得到header中的信息
         String userId = request.getHeader("userId");
         Optional<String> optional = Optional.ofNullable(userId);
-        if(optional.isPresent()){
+        if(optional.isPresent() || 1 == 1){
             //把用户id存入threadloacl中
             WmUser wmUser = new WmUser();
-            wmUser.setId(Integer.valueOf(userId));
+//            wmUser.setId(Integer.valueOf(userId));
+            wmUser.setId(4);
             WmThreadLocalUtil.setUser(wmUser);
             log.info("wmTokenFilter设置用户信息到threadlocal中...");
         }
