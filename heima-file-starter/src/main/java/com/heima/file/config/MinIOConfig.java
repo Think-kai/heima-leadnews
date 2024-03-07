@@ -8,14 +8,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
-/**
- * <p>Project: heima-leadnews </p>
- * <p>Description: </p>
- * <p>Copyright (c) 2024 Karrytech (Shanghai/Beijing) Co., Ltd.</p>
- * <p>All Rights Reserved.</p>
- *
- * @author <a href="mailto:zhangkai@karrytech.com">Zhang Kai</a>
- */
+
 @Data
 @EnableConfigurationProperties(MinIOConfigProperties.class)
 @ConditionalOnClass(FileStorageService.class)

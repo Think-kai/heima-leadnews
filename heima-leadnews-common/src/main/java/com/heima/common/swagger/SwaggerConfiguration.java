@@ -1,13 +1,6 @@
 package com.heima.common.swagger;
 
-/**
- * <p>Project: heima-leadnews </p>
- * <p>Description: </p>
- * <p>Copyright (c) 2024 Karrytech (Shanghai/Beijing) Co., Ltd.</p>
- * <p>All Rights Reserved.</p>
- *
- * @author <a href="mailto:zhangkai@karrytech.com">Zhang Kai</a>
- */
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;

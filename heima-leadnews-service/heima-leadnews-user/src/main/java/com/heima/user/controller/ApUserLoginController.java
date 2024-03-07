@@ -11,14 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * <p>Project: heima-leadnews </p>
- * <p>Description: </p>
- * <p>Copyright (c) 2024 Karrytech (Shanghai/Beijing) Co., Ltd.</p>
- * <p>All Rights Reserved.</p>
- *
- * @author <a href="mailto:zhangkai@karrytech.com">Zhang Kai</a>
- */
+
 @RestController
 @RequestMapping("/api/v1/login")
 @Api(value = "app端客户登录", tags = "ap_user")

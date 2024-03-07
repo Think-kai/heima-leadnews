@@ -16,14 +16,7 @@ import org.springframework.util.StringUtils;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * <p>Project: heima-leadnews </p>
- * <p>Description: </p>
- * <p>Copyright (c) 2024 Karrytech (Shanghai/Beijing) Co., Ltd.</p>
- * <p>All Rights Reserved.</p>
- *
- * @author <a href="mailto:zhangkai@karrytech.com">Zhang Kai</a>
- */
+
 @Service
 public class ApUserServiceImpl extends ServiceImpl<ApUserMapper, ApUser> implements ApUserService {
 

@@ -11,4 +11,7 @@ spring:
 server:
   tomcat:
     uri-encoding: utf-8
+tess4j:
+  data-path: C:\Users\lijunjie\Desktop\leadnews\heima-leadnews\heima-leadnews-common\src\main\resources\tessdata
+  language: chi_sim
 
