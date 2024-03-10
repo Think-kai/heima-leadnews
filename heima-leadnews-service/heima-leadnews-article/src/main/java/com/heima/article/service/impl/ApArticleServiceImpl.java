@@ -40,6 +40,8 @@ public class ApArticleServiceImpl  extends ServiceImpl<ApArticleMapper, ApArticl
     private ApArticleConfigMapper apArticleConfigMapper;
     @Autowired
     private ApArticleContentMapper apArticleContentMapper;
+    @Autowired
+    private ArticleFreemarkerServiceImpl articleFreemarkerService;
 
     /**
      * 根据参数加载文章列表
@@ -84,6 +86,12 @@ public class ApArticleServiceImpl  extends ServiceImpl<ApArticleMapper, ApArticl
      */
     @Override
     public ResponseResult saveArticle(ArticleDto dto) {
+
+        //        try {
+        //            Thread.sleep(3000);
+        //        } catch (InterruptedException e) {
+        //            e.printStackTrace();
+        //        }
         //1.检查参数
         if(dto == null){
             return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID);
@@ -120,6 +128,9 @@ public class ApArticleServiceImpl  extends ServiceImpl<ApArticleMapper, ApArticl
             apArticleContent.setContent(dto.getContent());
             apArticleContentMapper.updateById(apArticleContent);
         }
+
+        //异步调用 生成静态文件上传到minio中
+        articleFreemarkerService.buildArticleToMinIO(apArticle,dto.getContent());
 
 
         //3.结果返回  文章的id
