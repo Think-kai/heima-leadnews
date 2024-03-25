@@ -10,10 +10,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>heima-leadnews-test</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>es-init</module>
+        <module>mongo-demo</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+
 
 </project>
